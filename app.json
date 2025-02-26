@@ -1,0 +1,79 @@
+{
+  "expo": {
+    "name": "Bill Bucks",
+    "slug": "bill-bucks",
+    "version": "1.2.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/bill-bucks.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSUserNotificationUsageDescription": "This app uses notifications to alert you about updates and important events.",
+        "UIBackgroundModes": ["remote-notification"],
+        "NSPhotoLibraryUsageDescription": "This app needs access to the photo library to upload files."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/bill-bucks.png",
+        "backgroundColor": "#ffffff"
+      },
+      "versionCode": 1,
+      "package": "com.devcodersubha.billbucks",
+      "googleServicesFile": "./credentials/google-services.json",
+      "notification": {
+        "icon": "./assets/images/bill-bucks.png",
+        "color": "#5b5b5b"
+      },
+      "permissions": [
+        "VIBRATE",
+        "WAKE_LOCK",
+        "RECEIVE_BOOT_COMPLETED",
+        "ACCESS_NOTIFICATION_POLICY",
+        "POST_NOTIFICATIONS",
+        "android.permission.PREVENT_POWER_KEY"
+      ],
+      "softwareKeyboardLayoutMode": "pan",
+      "windowSoftInputMode": "adjustResize",
+      "navigationBarColor": "transparent",
+      "statusBarColor": "transparent",
+      "windowTranslucentStatus": true,
+      "windowTranslucentNavigation": true,
+      "androidWindowEdgeToEdge": true,
+      "androidWindowLayoutInDisplayCutoutMode": "never",
+      "useNextNotificationsApi": true
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/icon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/bill-bucks.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "2be5c89d-e764-4c1d-a65b-d3369269fa2d"
+      }
+    },
+    "owner": "devcodersubha"
+  }
+}

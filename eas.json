@@ -1,0 +1,48 @@
+{
+  "cli": {
+    "version": ">= 10.2.4"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "android": {
+        "gradleCommand": ":app:assembleDebug",
+        "withoutCredentials": true
+      },
+      "ios": {
+        "buildConfiguration": "Debug"
+      },
+      "env": {
+        "GOOGLE_SERVICES_FILE": "./credentials/google-services.json"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "env": {
+        "GOOGLE_SERVICES_FILE": "./credentials/google-services.json"
+      }
+    },
+    "production": {
+      "releaseChannel": "default",
+      "android": {
+        "buildType": "app-bundle"
+      },
+      "env": {
+        "GOOGLE_SERVICES_FILE": "./credentials/google-services.json"
+      }
+    },
+    "apk-production": {
+      "releaseChannel": "default",
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "GOOGLE_SERVICES_FILE": "./credentials/google-services.json"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
